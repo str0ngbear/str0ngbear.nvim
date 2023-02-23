@@ -125,8 +125,8 @@ hl.syntax = {
     Title = colors.moss,
     Tag = colors.pink,
     Delimiter = colors.LightGrey,
-    Comment = {fg = c.grey, fmt = cfg.code_style.comments},
-    SpecialComment = {fg = c.grey, fmt = cfg.code_style.comments},
+    Comment = {fg = c.light_grey, fmt = cfg.code_style.comments},
+    SpecialComment = {fg = c.light_grey, fmt = cfg.code_style.comments},
     Todo = {fg = c.cerise, fmt = cfg.code_style.comments}
 }
 
@@ -136,7 +136,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@attribute"] = colors.lime,
         ["@boolean"] = colors.gold,
         ["@character"] = colors.gold,
-        ["@comment"] = {fg = c.grey, fmt = cfg.code_style.comments},
+        ["@comment"] = {fg = c.light_grey, fmt = cfg.code_style.comments},
         ["@conditional"] = {fg = c.lilac, fmt = cfg.code_style.keywords},
         ["@constant"] = colors.gold,
         ["@constant.builtin"] = colors.gold,
@@ -202,7 +202,7 @@ else
         TSAttribute = colors.lime,
         TSBoolean = colors.gold,
         TSCharacter = colors.gold,
-        TSComment = {fg = c.grey, fmt = cfg.code_style.comments},
+        TSComment = {fg = c.light_grey, fmt = cfg.code_style.comments},
         TSConditional = {fg = c.lilac, fmt = cfg.code_style.keywords},
         TSConstant = colors.gold,
         TSConstBuiltin = colors.gold,
@@ -232,7 +232,7 @@ else
         TSPunctBracket = colors.LightGrey,
         TSPunctSpecial = colors.cerise,
         TSRepeat = {fg = c.lilac, fmt = cfg.code_style.keywords},
-        TSString = {fg = c.pink, fmt = cfg.code_style.strings},
+        TSString = {fg = c.sunny, fmt = cfg.code_style.strings},
         TSStringRegex = {fg = c.gold, fmt = cfg.code_style.strings},
         TSStringEscape = {fg = c.cerise, fmt = cfg.code_style.strings},
         TSSymbol = colors.pink,
@@ -294,7 +294,7 @@ hl.plugins.lsp = {
     LspReferenceWrite = { bg = c.bg2 },
     LspReferenceRead = { bg = c.bg2 },
 
-    LspCodeLens = { fg = c.grey, fmt = cfg.code_style.comments },
+    LspCodeLens = { fg = c.light_grey, fmt = cfg.code_style.comments },
     LspCodeLensSeparator = { fg = c.grey },
 }
 
@@ -522,7 +522,7 @@ hl.plugins.mini = {
     MiniStarterCurrent = { fmt = "nocombine" },
     MiniStarterFooter = { fg = c.dark_cerise, fmt = "italic" },
     MiniStarterHeader = colors.sunny,
-    MiniStarterInactive = { fg = c.grey, fmt = cfg.code_style.comments },
+    MiniStarterInactive = { fg = c.light_grey, fmt = cfg.code_style.comments },
     MiniStarterItem = { fg = c.fg, bg = cfg.transparent and c.none or c.bg0 },
     MiniStarterItemBullet = { fg = c.grey },
     MiniStarterItemPrefix = { fg = c.sunny },
@@ -695,7 +695,7 @@ local lsp_kind_icons_color = {
     Property = c.lime,
     Reference = c.gold,
     Snippet = c.cerise,
-    String = c.pink,
+    String = c.sunny,
     Struct = c.lilac,
     Text = c.light_grey,
     TypeParameter = c.cerise,
