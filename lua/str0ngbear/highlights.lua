@@ -94,7 +94,7 @@ hl.common = {
 }
 
 hl.syntax = {
-    String = {fg = c.lime, fmt = cfg.code_style.strings},
+    String = {fg = c.text_fg, fmt = cfg.code_style.strings},
     Character = colors.gold,
     Number = colors.gold,
     Float = colors.gold,

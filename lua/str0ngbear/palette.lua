@@ -16,7 +16,7 @@ return {
 		gold = '#FFB829';
 		brick = '#CB4154';
 		lilac = '#AE81FF';
-		frost = '#2C89C7' ;
+		frost = '#1399f2' ;
 		sunny = '#FFFC7F';
 		mordant = '#AE0C00';
 		auburn = '#7C0A02';
