@@ -1,6 +1,7 @@
 return {
 	dark = {
 		text = '#F8F8F2';
+		text_fg = '#F8F8F2';
 		text_bg = '#1C1B1A';
 		bg0 = '#1C1B1A';
 		white = '#FFFFFF';
