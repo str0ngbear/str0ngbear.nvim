@@ -95,7 +95,7 @@ hl.common = {
 }
 
 hl.syntax = {
-    String = {fg = c.text_fg, fmt = cfg.code_style.strings},
+    String = {fg = c.sunny, fmt = cfg.code_style.strings},
     Character = colors.gold,
     Number = colors.gold,
     Float = colors.gold,
@@ -108,7 +108,7 @@ hl.syntax = {
     PreProc = colors.lilac,
     PreCondit = colors.lilac,
     Include = colors.lilac,
-    Keyword = {fg = c.lilac, fmt = cfg.code_style.keywords},
+    Keyword = {fg = c.lime, fmt = cfg.code_style.keywords},
     Define = colors.lilac,
     Typedef = colors.lilac,
     Exception = colors.lilac,
@@ -166,7 +166,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@punctuation.bracket"] = colors.LightGrey,
         ["@punctuation.special"] = colors.cerise,
         ["@repeat"] = {fg = c.lilac, fmt = cfg.code_style.keywords},
-        ["@string"] = {fg = c.text_fg, fmt = cfg.code_style.strings},
+        ["@string"] = {fg = c.sunny, fmt = cfg.code_style.strings},
         ["@string.regex"] = {fg = c.gold, fmt = cfg.code_style.strings},
         ["@string.escape"] = {fg = c.cerise, fmt = cfg.code_style.strings},
         ["@symbol"] = colors.pink,
