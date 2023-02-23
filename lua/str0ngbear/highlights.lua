@@ -1,6 +1,6 @@
-local c = require('strongbear.colors')
-local cfg = vim.g.strongbear_config
-local util = require("strongbear.util")
+local c = require('str0ngbear.colors')
+local cfg = vim.g.str0ngbear_config
+local util = require("str0ngbear.util")
 
 local M = {}
 local hl = {langs = {}, plugins = {}}
@@ -725,7 +725,7 @@ function M.setup()
             color_name = c[name]
             if not color_name then
                 vim.schedule(function()
-                    vim.notify('strongbear.nvim: unknown color "' .. name .. '"', vim.log.levels.ERROR, { title = "onedark.nvim" })
+                    vim.notify('str0ngbear.nvim: unknown color "' .. name .. '"', vim.log.levels.ERROR, { title = "onedark.nvim" })
                 end)
                 return ""
             end
@@ -733,7 +733,7 @@ function M.setup()
         return prefix .. "=" .. color_name
     end
 
-    for group_name, group_settings in pairs(vim.g.strongbear_config.highlights) do
+    for group_name, group_settings in pairs(vim.g.str0ngbear_config.highlights) do
         vim.api.nvim_command(string.format("highlight %s %s %s %s %s", group_name,
             replace_color("guifg", group_settings.fg),
             replace_color("guibg", group_settings.bg),

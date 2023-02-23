@@ -1,5 +1,5 @@
-local c = require('strongbear.colors')
-local cfg = vim.g.strongbear_config
+local c = require('str0ngbear.colors')
+local cfg = vim.g.str0ngbear_config
 local colors = {
     bg = c.bg0,
     fg = c.fg,

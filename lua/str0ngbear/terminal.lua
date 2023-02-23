@@ -1,6 +1,6 @@
 local M = {}
-local cfg = vim.g.strongbear_config
-local c = require 'strongbear.colors'
+local cfg = vim.g.str0ngbear_config
+local c = require 'str0ngbear.colors'
 
 function M.setup()
     if not cfg.term_colors then return end

@@ -1,43 +1,43 @@
 local M = {}
 
 M.styles_list = { 'dark' }
----Change strongbear option (vim.g.strongbear_config.option)
----It can't be changed directly by modifing that field due to a Neovim lua bug with global variables (strongbear_config is a global variable)
+---Change str0ngbear option (vim.g.str0ngbear_config.option)
+---It can't be changed directly by modifing that field due to a Neovim lua bug with global variables (str0ngbear_config is a global variable)
 ---@param opt string: option name
 ---@param value any: new value
 function M.set_options(opt, value)
-    local cfg = vim.g.strongbear_config
+    local cfg = vim.g.str0ngbear_config
     cfg[opt] = value
-    vim.g.strongbear_config = cfg
+    vim.g.str0ngbear_config = cfg
 end
 
----Apply the colorscheme (same as ':colorscheme strongbear')
+---Apply the colorscheme (same as ':colorscheme str0ngbear')
 function M.colorscheme()
     vim.cmd("hi clear")
     if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
     vim.o.termguicolors = true
-    vim.g.colors_name = "strongbear"
+    vim.g.colors_name = "str0ngbear"
     if vim.o.background == 'light' then
         M.set_options('style', 'light')
-    elseif vim.g.strongbear_config.style == 'light' then
+    elseif vim.g.str0ngbear_config.style == 'light' then
         M.set_options('style', 'dark')
     end
-    require('strongbear.highlights').setup()
-    require('strongbear.terminal').setup()
+    require('str0ngbear.highlights').setup()
+    require('str0ngbear.terminal').setup()
 end
 
----Toggle between strongbear styles
+---Toggle between str0ngbear styles
 function M.toggle()
-    local index = vim.g.strongbear_config.toggle_style_index + 1
-    if index > #vim.g.strongbear_config.toggle_style_list then index = 1 end
-    M.set_options('style', vim.g.strongbear_config.toggle_style_list[index])
+    local index = vim.g.str0ngbear_config.toggle_style_index + 1
+    if index > #vim.g.str0ngbear_config.toggle_style_list then index = 1 end
+    M.set_options('style', vim.g.str0ngbear_config.toggle_style_list[index])
     M.set_options('toggle_style_index', index)
-    if vim.g.strongbear_config.style == 'light' then
+    if vim.g.str0ngbear_config.style == 'light' then
         vim.o.background = 'light'
     else
         vim.o.background = 'dark'
     end
-    vim.api.nvim_command('colorscheme strongbear')
+    vim.api.nvim_command('colorscheme str0ngbear')
 end
 
 local default_config = {
@@ -76,27 +76,27 @@ local default_config = {
     },
 }
 
----Setup strongbear.nvim options, without applying colorscheme
+---Setup str0ngbear.nvim options, without applying colorscheme
 ---@param opts table: a table containing options
 function M.setup(opts)
-    if not vim.g.strongbear_config or not vim.g.strongbear_config.loaded then    -- if it's the first time setup() is called
-        vim.g.strongbear_config = vim.tbl_deep_extend('keep', vim.g.strongbear_config or {}, default_config)
+    if not vim.g.str0ngbear_config or not vim.g.str0ngbear_config.loaded then    -- if it's the first time setup() is called
+        vim.g.str0ngbear_config = vim.tbl_deep_extend('keep', vim.g.str0ngbear_config or {}, default_config)
         M.set_options('loaded', true)
         M.set_options('toggle_style_index', 0)
     end
     if opts then
-        vim.g.strongbear_config = vim.tbl_deep_extend('force', vim.g.strongbear_config, opts)
+        vim.g.str0ngbear_config = vim.tbl_deep_extend('force', vim.g.str0ngbear_config, opts)
         if opts.toggle_style_list then    -- this table cannot be extended, it has to be replaced
             M.set_options('toggle_style_list', opts.toggle_style_list)
         end
     end
-    if vim.g.strongbear_config.toggle_style_key then
-      vim.api.nvim_set_keymap('n', vim.g.strongbear_config.toggle_style_key, '<cmd>lua require("strongbear").toggle()<cr>', { noremap = true, silent = true })
+    if vim.g.str0ngbear_config.toggle_style_key then
+      vim.api.nvim_set_keymap('n', vim.g.str0ngbear_config.toggle_style_key, '<cmd>lua require("str0ngbear").toggle()<cr>', { noremap = true, silent = true })
     end
 end
 
 function M.load()
-  vim.api.nvim_command('colorscheme strongbear')
+  vim.api.nvim_command('colorscheme str0ngbear')
 end
 
 return M
