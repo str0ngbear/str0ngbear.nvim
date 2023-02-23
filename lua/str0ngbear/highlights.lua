@@ -151,7 +151,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@function.macro"] = {fg = c.lime, fmt = cfg.code_style.functions},
         ["@include"] = colors.lilac,
         ["@keyword"] = {fg = c.lilac, fmt = cfg.code_style.keywords},
-        ["@keyword.function"] = {fg = c.lilac, fmt = cfg.code_style.functions},
+        ["@keyword.function"] = {fg = c.lime, fmt = cfg.code_style.functions},
         ["@keyword.operator"] =  {fg = c.lilac, fmt = cfg.code_style.keywords},
         ["@label"] = colors.cerise,
         ["@method"] = colors.frost,
@@ -263,7 +263,7 @@ end
 local diagnostics_error_color = cfg.diagnostics.darker and c.dark_cerise or c.cerise
 local diagnostics_hint_color = cfg.diagnostics.darker and c.dark_lilac or c.lilac
 local diagnostics_warn_color = cfg.diagnostics.darker and c.dark_sunny or c.sunny
-local diagnostics_info_color = cfg.diagnostics.darker and c.dark_lime or c.lime
+local diagnostics_info_color = cfg.diagnostics.darker and c.moss or c.lime
 hl.plugins.lsp = {
     LspCxxHlGroupEnumConstant = colors.gold,
     LspCxxHlGroupMemberVariable = colors.gold,
