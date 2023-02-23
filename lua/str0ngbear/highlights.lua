@@ -122,7 +122,7 @@ hl.syntax = {
     Function = {fg = c.frost, fmt = cfg.code_style.functions},
     Operator = colors.lilac,
     Title = colors.moss,
-    Tag = colors.lime,
+    Tag = colors.pink,
     Delimiter = colors.LightGrey,
     Comment = {fg = c.grey, fmt = cfg.code_style.comments},
     SpecialComment = {fg = c.grey, fmt = cfg.code_style.comments},
@@ -132,7 +132,7 @@ hl.syntax = {
 if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     hl.treesitter = {
         ["@annotation"] = colors.Fg,
-        ["@attribute"] = colors.lime,
+        ["@attribute"] = colors.pink,
         ["@boolean"] = colors.gold,
         ["@character"] = colors.gold,
         ["@comment"] = {fg = c.grey, fmt = cfg.code_style.comments},

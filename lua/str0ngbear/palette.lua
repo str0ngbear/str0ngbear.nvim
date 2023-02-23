@@ -22,6 +22,7 @@ return {
 		mordant = '#AE0C00';
 		auburn = '#7C0A02';
 		moss = '#004225';
+		pink = '#FF007F';
 
 		diff_add = '#004225';
 		diff_delete = '#7C0A02';
