@@ -1,24 +1,24 @@
 local c = require('str0ngbear.colors')
-local cfg = vim.g.str0ngbear_config
-local util = require("str0ngbear.util")
+    local cfg = vim.g.str0ngbear_config
+    local util = require("str0ngbear.util")
 
-local M = {}
-local hl = {langs = {}, plugins = {}}
+    local M = {}
+    local hl = {langs = {}, plugins = {}}
 
-local function vim_highlights(highlights)
-    for group_name, group_settings in pairs(highlights) do
-        vim.api.nvim_command(string.format("highlight %s guifg=%s guibg=%s guisp=%s gui=%s", group_name,
-            group_settings.fg or "none",
-            group_settings.bg or "none",
-            group_settings.sp or "none",
-            group_settings.fmt or "none"))
+    local function vim_highlights(highlights)
+        for group_name, group_settings in pairs(highlights) do
+            vim.api.nvim_command(string.format("highlight %s guifg=%s guibg=%s guisp=%s gui=%s", group_name,
+                group_settings.fg or "none",
+                group_settings.bg or "none",
+                group_settings.sp or "none",
+                group_settings.fmt or "none"))
+        end
     end
-end
 
-local colors = {
-    Fg = {fg = c.fg},
-    LightGrey = {fg = c.light_grey},
-    Grey = {fg = c.grey},
+    local colors = {
+        Fg = {fg = c.fg},
+        LightGrey = {fg = c.light_grey},
+        Grey = {fg = c.grey},
     cerise = {fg = c.cerise},
     sunny = {fg = c.sunny},
     gold = {fg = c.gold},
@@ -95,7 +95,7 @@ hl.common = {
 }
 
 hl.syntax = {
-    String = {fg = c.sunny, fmt = cfg.code_style.strings},
+    String = {fg = c.text, fmt = cfg.code_style.strings},
     Character = colors.gold,
     Number = colors.gold,
     Float = colors.gold,
@@ -166,7 +166,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@punctuation.bracket"] = colors.LightGrey,
         ["@punctuation.special"] = colors.cerise,
         ["@repeat"] = {fg = c.lilac, fmt = cfg.code_style.keywords},
-        ["@string"] = {fg = c.sunny, fmt = cfg.code_style.strings},
+        ["@string"] = {fg = c.text, fmt = cfg.code_style.strings},
         ["@string.regex"] = {fg = c.gold, fmt = cfg.code_style.strings},
         ["@string.escape"] = {fg = c.cerise, fmt = cfg.code_style.strings},
         ["@symbol"] = colors.pink,
@@ -232,7 +232,7 @@ else
         TSPunctBracket = colors.LightGrey,
         TSPunctSpecial = colors.cerise,
         TSRepeat = {fg = c.lilac, fmt = cfg.code_style.keywords},
-        TSString = {fg = c.sunny, fmt = cfg.code_style.strings},
+        TSString = {fg = c.text, fmt = cfg.code_style.strings},
         TSStringRegex = {fg = c.gold, fmt = cfg.code_style.strings},
         TSStringEscape = {fg = c.cerise, fmt = cfg.code_style.strings},
         TSSymbol = colors.pink,
@@ -695,7 +695,7 @@ local lsp_kind_icons_color = {
     Property = c.lime,
     Reference = c.gold,
     Snippet = c.cerise,
-    String = c.sunny,
+    String = c.text,
     Struct = c.lilac,
     Text = c.light_grey,
     TypeParameter = c.cerise,
