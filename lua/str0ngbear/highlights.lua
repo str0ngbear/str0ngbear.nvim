@@ -188,7 +188,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@text.uri"] = {fg = c.pink, fmt = 'underline'},
         ["@text.todo"] = {fg = c.cerise, fmt = cfg.code_style.comments},
         ["@text.math"] = colors.Fg,
-        ["@text.reference"] = colors.frost,
+        ["@text.reference"] = colors.lime,
         ["@text.environment"] = colors.Fg,
         ["@text.environment.name"] = colors.Fg,
         ["@text.diff.add"] = colors.lime,
@@ -253,7 +253,7 @@ else
         TSLiteral = colors.pink,
         TSURI = {fg = c.lime, fmt = 'underline'},
         TSMath = colors.Fg,
-        TSTextReference = colors.frost,
+        TSTextReference = colors.lime,
         TSEnviroment = colors.Fg,
         TSEnviromentName = colors.Fg,
         TSNote = colors.Fg,
@@ -273,7 +273,7 @@ local diagnostics_info_color = cfg.diagnostics.darker and c.moss or c.lime
 hl.plugins.lsp = {
     LspCxxHlGroupEnumConstant = colors.gold,
     LspCxxHlGroupMemberVariable = colors.gold,
-    LspCxxHlGroupNamespace = colors.frost,
+    LspCxxHlGroupNamespace = colors.lime,
     LspCxxHlSkippedRegion = colors.Grey,
     LspCxxHlSkippedRegionBeginEnd = colors.cerise,
 
@@ -565,7 +565,7 @@ hl.plugins.mini = {
 }
 
 hl.langs.c = {
-    cInclude = colors.frost,
+    cInclude = colors.lime,
     cStorageClass = colors.lilac,
     cTypedef = colors.lilac,
     cDefine = colors.pink,
@@ -576,8 +576,8 @@ hl.langs.c = {
 }
 
 hl.langs.cpp = {
-    cppStatement = { fg = c.lilac, fmt = "bold" },
-    cppTSInclude = colors.frost,
+    cppStatement = { fg = c.orange, fmt = "bold" },
+    cppTSInclude = colors.yellow,
     cppTSConstant = colors.lime,
     cppTSConstMacro = colors.lilac,
     cppTSOperator = colors.lilac,
