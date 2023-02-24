@@ -17,6 +17,7 @@ return {
 		lime = '#AEEE00';
 		green = '#AEEE00';
 		turqoise = '#458588';
+		moss = '#004225';
 
 		yellow = '#ffea00';
 		sunny = '#FFFC7F';
@@ -24,14 +25,16 @@ return {
 		gold = '#FFB829';
 		orange = '#FFA500';
 
-		cerise = '#FF0000';
+		cerise = '#FF0033';
+		mordant = '#AE0C00';
 		auburn = '#7C0A02';
+		brick = '#CB4154';
 
 		pink = '#FA4DA3';
 		lilac = '#AE81FF';
 
 		blue = '#008cff';
-		frost = '#4db5fa' ;
+		frost = '#2C89C7' ;
 
 
 		diff_add = '#004225';
