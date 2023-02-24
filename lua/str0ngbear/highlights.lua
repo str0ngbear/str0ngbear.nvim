@@ -113,7 +113,7 @@ hl.syntax = {
     PreProc = colors.lilac,
     PreCondit = colors.yellow,
     Include = colors.lilac,
-    Keyword = {fg = c.lime, fmt = cfg.code_style.keywords},
+    Keyword = {fg = c.pink, fmt = cfg.code_style.keywords},
     Define = colors.lilac,
     Typedef = colors.lilac,
     Exception = colors.lilac,
@@ -138,7 +138,7 @@ hl.syntax = {
 if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     hl.treesitter = {
         ["@annotation"] = colors.Fg,
-        ["@attribute"] = colors.lime,
+        ["@attribute"] = colors.pink,
         ["@boolean"] = colors.gold,
         ["@character"] = colors.gold,
         ["@comment"] = {fg = c.light_grey, fmt = cfg.code_style.comments},
