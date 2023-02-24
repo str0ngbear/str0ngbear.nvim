@@ -15,8 +15,8 @@ return {
 		bg3 = '#545454';
 
 		lime = '#AEEE00';
+		green = '#AEEE00';
 		turqoise = '#458588';
-		green = '#00AB17';
 
 		yellow = '#ffea00';
 		sunny = '#FFFC7F';
