@@ -20,7 +20,8 @@ return {
 		moss = '#004225';
 
 		yellow = '#ffea00';
-		sunny = '#DFDC5F';
+		sunny = '#FFFC7F';
+		dark_sunny= '#99994F';
 
 		gold = '#FFB829';
 		orange = '#FFA500';
