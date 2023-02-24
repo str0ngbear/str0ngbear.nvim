@@ -673,6 +673,10 @@ hl.langs.vim = {
     vimCommentTitle = {fg = c.frost, fmt = cfg.code_style.comments},
 }
 
+hl.langs.python = {
+    pythonMultiLineComments = colors.frost,
+}
+
 local lsp_kind_icons_color = {
     Default = c.lilac,
     Array = c.sunny,
