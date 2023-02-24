@@ -15,6 +15,7 @@ return {
 		bg3 = '#545454';
 
 		lime = '#AEEE00';
+		turqoise = '#458588';
 		green = '#00AB17';
 
 		yellow = '#ffea00';
@@ -31,6 +32,7 @@ return {
 
 		blue = '#008cff';
 		frost = '#4db5fa' ;
+
 
 		diff_add = '#004225';
 		diff_delete = '#7C0A02';

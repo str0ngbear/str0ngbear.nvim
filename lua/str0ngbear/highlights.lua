@@ -117,8 +117,8 @@ hl.syntax = {
     Define = colors.lilac,
     Typedef = colors.lilac,
     Exception = colors.lilac,
-    Conditional = {fg = c.lilac, fmt = cfg.code_style.keywords},
-    Repeat = {fg = c.lilac, fmt = cfg.code_style.keywords},
+    Conditional = {fg = c.yellow, fmt = cfg.code_style.keywords},
+    Repeat = {fg = c.yellow, fmt = cfg.code_style.keywords},
     Statement = colors.lilac,
     Macro = colors.cerise,
     Error = colors.lilac,
@@ -198,6 +198,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@danger"] = colors.Fg,
         ["@type"] = colors.sunny,
         ["@type.builtin"] = colors.gold,
+        -- todo: change variable colors
         ["@variable"] = {fg = c.fg, fmt = cfg.code_style.variables},
         ["@variable.builtin"] = {fg = c.cerise, fmt = cfg.code_style.variables},
     }
