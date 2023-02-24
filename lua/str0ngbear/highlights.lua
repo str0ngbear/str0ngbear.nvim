@@ -149,7 +149,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@constructor"] = {fg = c.sunny, fmt = "bold"},
         ["@error"] = colors.Fg,
         ["@exception"] = colors.auburn,
-        ["@field"] = colors.lime,
+        ["@field"] = colors.pink,
         ["@float"] = colors.orange,
         ["@function"] = {fg = c.frost, fmt = cfg.code_style.functions},
         ["@function.builtin"] = {fg = c.lime, fmt = cfg.code_style.functions},
