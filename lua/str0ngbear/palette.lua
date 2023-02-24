@@ -34,7 +34,7 @@ return {
 		lilac = '#AE81FF';
 
 		blue = '#008cff';
-		frost = '#2C89C7' ;
+		frost = '#3CA9D7' ;
 
 
 		diff_add = '#004225';
