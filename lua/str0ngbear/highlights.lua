@@ -108,8 +108,8 @@ hl.syntax = {
     Type = colors.sunny,
     Structure = colors.sunny,
     StorageClass = colors.sunny,
-    Identifier = {fg = c.cerise, fmt = cfg.code_style.variables},
-    Constant = colors.moss,
+    Identifier = {fg = c.pink, fmt = cfg.code_style.variables},
+    Constant = colors.green,
     PreProc = colors.lilac,
     PreCondit = colors.yellow,
     Include = colors.lilac,
@@ -120,11 +120,11 @@ hl.syntax = {
     Conditional = {fg = c.yellow, fmt = cfg.code_style.keywords},
     Repeat = {fg = c.yellow, fmt = cfg.code_style.keywords},
     Statement = colors.lilac,
-    Macro = colors.cerise,
+    Macro = colors.lime,
     Error = colors.lilac,
     Label = colors.lilac,
-    Special = colors.cerise,
-    SpecialChar = colors.cerise,
+    Special = colors.frost,
+    SpecialChar = colors.frost,
     Function = {fg = c.frost, fmt = cfg.code_style.functions},
     Operator = colors.lilac,
     Title = colors.moss,
@@ -132,7 +132,7 @@ hl.syntax = {
     Delimiter = colors.LightGrey,
     Comment = {fg = c.light_grey, fmt = cfg.code_style.comments},
     SpecialComment = {fg = c.light_grey, fmt = cfg.code_style.comments},
-    Todo = {fg = c.cerise, fmt = cfg.code_style.comments}
+    Todo = {fg = c.yellow, fmt = cfg.code_style.comments}
 }
 
 if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
@@ -186,7 +186,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@text.title"] = {fg = c.gold, fmt = 'bold'},
         ["@text.literal"] = colors.pink,
         ["@text.uri"] = {fg = c.pink, fmt = 'underline'},
-        ["@text.todo"] = {fg = c.cerise, fmt = cfg.code_style.comments},
+        ["@text.todo"] = {fg = c.yellow, fmt = cfg.code_style.comments},
         ["@text.math"] = colors.Fg,
         ["@text.reference"] = colors.lime,
         ["@text.environment"] = colors.Fg,
@@ -200,7 +200,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@type.builtin"] = colors.gold,
         -- todo: change variable colors
         ["@variable"] = {fg = c.fg, fmt = cfg.code_style.variables},
-        ["@variable.builtin"] = {fg = c.cerise, fmt = cfg.code_style.variables},
+        ["@variable.builtin"] = {fg = c.lime, fmt = cfg.code_style.variables},
     }
 else
     hl.treesitter = {
@@ -225,7 +225,7 @@ else
         TSKeyword = {fg = c.lilac, fmt = cfg.code_style.keywords},
         TSKeywordFunction = {fg = c.lilac, fmt = cfg.code_style.functions},
         TSKeywordOperator =  {fg = c.lilac, fmt = cfg.code_style.keywords},
-        TSLabel = colors.cerise,
+        TSLabel = colors.orange,
         TSMethod = colors.frost,
         TSNamespace = colors.sunny,
         TSNone = colors.Fg,
@@ -262,7 +262,7 @@ else
         TSType = colors.sunny,
         TSTypeBuiltin = colors.gold,
         TSVariable = {fg = c.fg, fmt = cfg.code_style.variables},
-        TSVariableBuiltin = {fg = c.cerise, fmt = cfg.code_style.variables},
+        TSVariableBuiltin = {fg = c.orange, fmt = cfg.code_style.variables},
     }
 end
 
@@ -422,7 +422,7 @@ hl.plugins.neo_tree = {
     NeoTreeGitDeleted = colors.cerise,
     NeoTreeGitModified = colors.sunny,
     NeoTreeGitConflict = { fg = c.cerise, fmt = "bold,italic" },
-    NeoTreeGitUntracked = { fg = c.cerise, fmt = "italic" },
+    NeoTreeGitUntracked = { fg = c.orange, fmt = "italic" },
     NeoTreeIndentMarker = colors.Grey,
     NeoTreeSymbolicLinkTarget = colors.lilac,
 }
@@ -461,7 +461,7 @@ hl.plugins.nvim_tree = {
     NvimTreeFolderName = colors.frost,
 }
 hl.plugins.telescope = {
-    TelescopeBorder = colors.cerise,
+    TelescopeBorder = colors.lime,
     TelescopePromptBorder = colors.lime,
     TelescopeResultsBorder = colors.lime,
     TelescopePreviewBorder = colors.lime,
@@ -475,7 +475,7 @@ hl.plugins.dashboard = {
     DashboardShortCut = colors.frost,
     DashboardHeader = colors.sunny,
     DashboardCenter = colors.lime,
-    DashboardFooter = { fg = c.dark_cerise, fmt = "italic"}
+    DashboardFooter = { fg = c.orange, fmt = "italic"}
 }
 
 hl.plugins.outline = {
@@ -526,7 +526,7 @@ hl.plugins.mini = {
     MiniJump2dSpot = { fg = c.cerise, fmt = "bold,nocombine" },
 
     MiniStarterCurrent = { fmt = "nocombine" },
-    MiniStarterFooter = { fg = c.dark_cerise, fmt = "italic" },
+    MiniStarterFooter = { fg = c.cerise, fmt = "italic" },
     MiniStarterHeader = colors.sunny,
     MiniStarterInactive = { fg = c.light_grey, fmt = cfg.code_style.comments },
     MiniStarterItem = { fg = c.fg, bg = cfg.transparent and c.none or c.bg0 },
@@ -590,23 +590,23 @@ hl.langs.markdown = {
     markdownCode = colors.lime,
     markdownCodeBlock = colors.lime,
     markdownCodeDelimiter = colors.sunny,
-    markdownH1 = {fg = c.cerise, fmt = "bold"},
+    markdownH1 = {fg = c.lime, fmt = "bold"},
     markdownH2 = {fg = c.lilac, fmt = "bold"},
     markdownH3 = {fg = c.gold, fmt = "bold"},
-    markdownH4 = {fg = c.cerise, fmt = "bold"},
-    markdownH5 = {fg = c.lilac, fmt = "bold"},
+    markdownH4 = {fg = c.orange, fmt = "bold"},
+    markdownH5 = {fg = c.yellow, fmt = "bold"},
     markdownH6 = {fg = c.gold, fmt = "bold"},
     markdownHeadingDelimiter = colors.Grey,
     markdownHeadingRule = colors.Grey,
     markdownId = colors.sunny,
-    markdownIdDeclaration = colors.cerise,
+    markdownIdDeclaration = colors.green,
     markdownItalic = {fg = c.none, fmt = "italic"},
     markdownItalicDelimiter = {fg = c.grey, fmt = "italic"},
     markdownLinkDelimiter = colors.Grey,
-    markdownLinkText = colors.cerise,
+    markdownLinkText = colors.lime,
     markdownLinkTextDelimiter = colors.Grey,
-    markdownListMarker = colors.cerise,
-    markdownOrdeceriseListMarker = colors.cerise,
+    markdownListMarker = colors.lilac,
+    markdownOrderedListMarker = colors.lilac,
     markdownRule = colors.lilac,
     markdownUrl = {fg = c.frost, fmt = "underline"},
     markdownUrlDelimiter = colors.Grey,
@@ -623,7 +623,7 @@ hl.langs.php = {
     phpIdentifier = {fg = c.gold, fmt = cfg.code_style.variables},
     phpBoolean = colors.lime,
     phpNumber = colors.gold,
-    phpHeceriseoc = colors.lime,
+    phpHeredoc = colors.lime,
     phpNowDoc = colors.lime,
     phpSCKeyword = {fg = c.lilac, fmt = cfg.code_style.keywords},
     phpFCKeyword = {fg = c.lilac, fmt = cfg.code_style.keywords},
@@ -633,10 +633,10 @@ hl.langs.php = {
 hl.langs.scala = {
     scalaNameDefinition = colors.Fg,
     scalaInterpolationBoundary = colors.lilac,
-    scalaInterpolation = colors.lilac,
-    scalaTypeOperator = colors.cerise,
-    scalaOperator = colors.cerise,
-    scalaKeywordModifier = {fg = c.cerise, fmt = cfg.code_style.keywords},
+    scalaInterpolation = colors.orange,
+    scalaTypeOperator = colors.lime,
+    scalaOperator = colors.lilac,
+    scalaKeywordModifier = {fg = c.frost, fmt = cfg.code_style.keywords},
 }
 
 hl.langs.tex = {
@@ -653,7 +653,7 @@ hl.langs.tex = {
     texMathZoneXX = colors.gold,
     texMathDelimZone = colors.LightGrey,
     texMathDelim = colors.lilac,
-    texMathOper = colors.cerise,
+    texMathOper = colors.lilac,
     texCmd = colors.lilac,
     texCmdPart = colors.frost,
     texCmdPackage = colors.frost,
@@ -661,11 +661,11 @@ hl.langs.tex = {
 }
 
 hl.langs.vim = {
-    vimOption = colors.cerise,
+    vimOption = colors.lime,
     vimSetEqual = colors.sunny,
     vimMap = colors.lilac,
     vimMapModKey = colors.gold,
-    vimNotation = colors.cerise,
+    vimNotation = colors.yellow,
     vimMapLhs = colors.Fg,
     vimMapRhs = colors.frost,
     vimVar = {fg = c.fg, fmt = cfg.code_style.variables},
@@ -692,19 +692,19 @@ local lsp_kind_icons_color = {
     Keyword = c.lime,
     Method = c.frost,
     Module = c.gold,
-    Namespace = c.cerise,
+    Namespace = c.orange,
     Null = c.grey,
     Number = c.gold,
-    Object = c.cerise,
-    Operator = c.cerise,
+    Object = c.lime,
+    Operator = c.orange,
     Package = c.sunny,
     Property = c.lime,
     Reference = c.gold,
-    Snippet = c.cerise,
+    Snippet = c.sunny,
     String = c.text,
     Struct = c.lilac,
     Text = c.light_grey,
-    TypeParameter = c.cerise,
+    TypeParameter = c.yellow,
     Unit = c.lime,
     Value = c.gold,
     Variable = c.lilac,
